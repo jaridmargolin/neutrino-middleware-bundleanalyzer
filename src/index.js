@@ -16,8 +16,10 @@ module.exports = (neutrino, options) => {
   if (process.env.NODE_ENV === 'production') {
     neutrino.config.plugin('analyzer')
       .use(BundleAnalyzerPlugin, [merge({
+        reportFilename: '_report.html',
         analyzerMode: 'static',
-        openAnalyzer: false
+        openAnalyzer: false,
+        logLevel: 'silent'
       }, options)])
   }
 }
