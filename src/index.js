@@ -12,7 +12,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
  * middleware
  * -------------------------------------------------------------------------- */
 
-module.exports = (neutrino, options) => {
+module.exports = (neutrino, options = {}) => {
   if (process.env.NODE_ENV === 'production') {
     neutrino.config.plugin('analyzer')
       .use(BundleAnalyzerPlugin, [merge({

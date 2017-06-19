@@ -23,6 +23,6 @@
     "webpack-bundle-analyzer": "^2.8.2"
   },
   "peerDependencies": {
-    "neutrino": "^5.0.1"
+    "neutrino": "^6.0.3"
   }
 }
